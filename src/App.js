@@ -15,13 +15,14 @@ export default function App() {
     },
     onSubmit: values => {
       console.log('form:', values);
+      alert("Login Successful");
     },
     validate: values => {
       let errors={};
       // if(!values.name) errors.name = "Name Field is required"
       if(!values.email) errors.email = "Username should be an email format"
       if(!values.password) errors.password = "Password Field is required"
-      if(values.password && values.email) alert('Login Successful!') 
+//       if(values.password && values.email) alert('Login Successful!') 
       return errors;
     }
   })
